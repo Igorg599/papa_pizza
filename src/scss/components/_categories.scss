@@ -5,8 +5,8 @@
     display: flex;
 
     li {
-      background-color: #f9f9f9;
-      padding: 13px 30px;
+      background-color: #faf5f5;
+      padding: 9px 22px;
       border-radius: 30px;
       margin-right: 10px;
       font-weight: bold;
@@ -16,6 +16,8 @@
 
       &:hover {
         background-color: darken(#f9f9f9, 2%);
+        transform: translateY(3px);
+        transition: 0.3s;
       }
 
       &:active {
@@ -23,7 +25,7 @@
       }
 
       &.active {
-        background-color: #282828;
+        background-color: #c57d7d;
         color: #fff;
       }
     }

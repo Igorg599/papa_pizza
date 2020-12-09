@@ -1,26 +1,28 @@
 import React from 'react';
-import logoSvg from '../assets/img/pizza-logo.jpg';
+import { Link } from 'react-router-dom';
 
+import logoSvg from '../assets/img/pizza-logo.jpg';
+import pizza from '../assets/img/pizza.gif';
 
 function Header() {
 
     return (
         <div className="header">
             <div className="container">
-            <div>
+            <Link to="/">
                 <div className="header__logo">
                     <img width="250" src={logoSvg} alt="Pizza logo" />
                 </div>
-            </div>
+            </Link>
                 <div className="header__cart">
-                    <div>
+                    <Link to="/cart">
                         <button className="button outline">
                             <a href="/cart.html" className="button button--cart">
-                                <span>99 ₽</span>
+                                <span>1113 ₽</span>
                                 <div className="button__delimiter"></div>
-                                <svg
-                                    width="18"
-                                    height="18"
+                                <svg className="header__cart_svg"
+                                    width="30"
+                                    height="30"
                                     viewBox="0 0 18 18"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -47,10 +49,11 @@ function Header() {
                                     strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span>3</span>
+                                <img className="header__arrow_svg" width="30" src={pizza} alt="PIZZA"/>
+                                <span>11</span>
                             </a>                         
                         </button>
-                    </div>                    
+                    </Link>                    
                 </div>
             </div>
         </div>

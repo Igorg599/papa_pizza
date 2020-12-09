@@ -4,10 +4,27 @@
   border-bottom: 1px solid $orange;
   padding: 20px 0;
 
+  &:hover {
+    .header__cart_svg {
+      display: none;
+    }
+    .header__arrow_svg {
+      display: flex;
+      transition-duration: 3s;
+    }
+  }
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__arrow_svg {
+    display: none;
+    margin-right: 8px;
+    margin-bottom: 1px;
+    border-radius: 33px;
   }
 
   &__logo {
