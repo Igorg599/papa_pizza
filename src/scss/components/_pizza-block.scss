@@ -17,6 +17,7 @@
   }
 
   &__image {
+    align-items: center;
     width: 274px;
     padding: 10px;
     &:hover {
@@ -27,13 +28,38 @@
   }
 
   &__title {
+    text-align: center;
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 1%;
     margin-bottom: 20px;
   }
 
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__descr {
+    text-align: left;
+    margin-top: 0px;
+    font-size: 14px;
+    color: rgb(87, 83, 83);
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+  }
+
+  
   &__selector {
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     background-color: #f3f3f3;
     border-radius: 10px;
@@ -67,19 +93,5 @@
         }
       }
     }
-  }
-
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-
-  &__price {
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 27px;
-    letter-spacing: 0.015em;
   }
 }
