@@ -1,6 +1,5 @@
 import React from 'react';
-import {Pizzas, Drink, Snacks, Sauce, Combo} from '../components/';
-import PizzaBlock from '../components/PizzaBlock/index';
+import PizzaBlock from '../components/Blocks/PizzaBlock';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchPizzas} from '../redux/action/pizzas';
 
@@ -13,18 +12,6 @@ function Home() {
 
   return (
     <div className="container">
-        <div className="content__top">
-          <div className="categories">
-              <ul>
-                <Pizzas/>
-                <Combo/>
-                <Drink/>
-                <Snacks/>
-                <Sauce/>
-              </ul>
-            </div>
-        </div>
-        <h2 className="content__title">Все пиццы</h2>
         <div className="content__items">
           {
             items.map(obj => 

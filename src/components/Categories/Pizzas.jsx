@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Pizzas() {
     return (
-        <Link to="/pizza">
+        <Link to="/">
             <li className='active'>Пицца</li>
         </Link>
     )

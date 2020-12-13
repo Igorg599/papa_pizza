@@ -11,16 +11,17 @@ function PizzaBlock(obj) {
 
   return (
     <>
-      <div className="pizza-block">
+      <div className="items-block">
         <img
-        className="pizza-block__image"
+        onClick={() => setmodalActive(true)}
+        className="items-block__image"
         src={imageUrl}
         alt="Pizza"
         />
-        <h4 className="pizza-block__title">{name}</h4>
-        <div className="pizza-block__descr">{descr}</div>
-        <div className="pizza-block__bottom">
-          <div className="pizza-block__price">от {price[0]} ₽</div>
+        <h4 className="items-block__title">{name}</h4>
+        <div className="items-block__descr">{descr}</div>
+        <div className="items-block__bottom">
+          <div className="items-block__price">от {price[0]} ₽</div>
           <Button onClick={() => setmodalActive(true)} className="button--add" outline>
             <span>Выбрать</span>
           </Button>

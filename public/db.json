@@ -96,5 +96,125 @@
         "price": [339, 556, 750, 1250],
         "rating": 4
       }
-    ]
+    ],
+  "drink": [
+    {
+      "id": 1,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/napitki/mors-1000x1000.jpg",
+      "name": "Морс 1л.",
+      "descr": "Морс 1л. в ассортименте",
+      "price": 150
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://cdn1.ozone.ru/multimedia/c500/1025757071.jpg",
+      "name": "Pepsi 1л.",
+      "descr": "Безалкогольный напиток Pepsi",
+      "price": 120
+    }
+  ],
+  "sauce": [
+    {
+      "id": 1,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/sousy/cezar-350x350.jpg",
+      "name": "Соус 'Чесночный'",
+      "descr": "Соус 'Чесночный' собственного приготовления.  Вес: 40.00 г",
+      "price": 35
+    },
+    {
+      "id": 2,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/sousy/cezar-350x350.jpg",
+      "name": "Соус 'Цезарь' (Heinz)",
+      "descr": "Соус 'Цезарь' (Heinz).   Вес: 40.00 г",
+      "price": 35
+    },
+    {
+      "id": 3,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/sousy/tomatnyj-350x350.jpg",
+      "name": "Соус 'Томатный'",
+      "descr": "Соус 'Томатный' собственного приготовления.    Вес: 40.00 г",
+      "price": 35
+    },
+    {
+      "id": 4,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/sousy/syrnyj-350x350.jpg",
+      "name": "Соус 'Сырный' (Heinz)",
+      "descr": "Соус 'Сырный' (Heinz).   Вес: 40.00 г",
+      "price": 35
+    },
+    {
+      "id": 5,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/sousy/salsa-350x350.jpg",
+      "name": "Соус 'Спайси'",
+      "descr": "Соус 'Спайси' собственного приготовления.    Вес: 40.00 г",
+      "price": 35
+    },
+    {
+      "id": 6,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/sousy/cezar-350x350.jpg",
+      "name": "Соус 'Горчичный'",
+      "descr": "Соус 'Горчичный' собственного приготовления.  Вес: 40.00 г",
+      "price": 35
+    },
+    {
+      "id": 7,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/sousy/bbq-350x350.jpg",
+      "name": "Соус 'Барбекью' (Heinz)",
+      "descr": "Соус 'Барбекью' (Heinz).   Вес: 40.00 г",
+      "price": 35
+    }
+  ],
+  "snacks": [
+    {
+      "id": 1,
+      "imageUrl": "https://admindelivery.ru/assets/photos/2019/05/20/item_3493041_1.jpg",
+      "name": "Сырные стрипсы и 1 соус на выбор",
+      "descr": "Состав: пшеничная лепёшка, соус 'Сырный', сыр 'Моцарелла'.  Вес: 250.00 г",
+      "price": 150
+    },
+    {
+      "id": 2,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/gorjachiezakuski/naggetsy-350x350.jpg",
+      "name": "Наггетсы куриные",
+      "descr": "Запеченое куриное филе в панировке. Вес: 150.00 г",
+      "price": 150
+    },
+    {
+      "id": 3,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/gorjachiezakuski/kartofelnyedolki-350x350.jpg",
+      "name": "Картофельные дольки",
+      "descr": "Запеченое куриное филе в панировке. Вес: 150.00 г",
+      "price": 150
+    }
+  ],
+  "combo": [
+    {
+      "id": 1,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/kombo/dljadruzej-350x350.jpg",
+      "name": "Комбо 'Для друзей'",
+      "descr": "В состав комбо входят 5 пицц размером M, 2 л. напитка на выбор и 5 соусов.",
+      "price": 2700
+    },
+    {
+      "id": 2,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/kombo/dljadvoih-350x350.jpg",
+      "name": "Комбо 'Для двоих'",
+      "descr": "В состав комбо входят 5 пицц размером M, 2 л. напитка на выбор и 5 соусов.",
+      "price": 950
+    },
+    {
+      "id": 3,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/kombo/vecherinka-350x350.jpg",
+      "name": "Комбо 'Вечеринка'",
+      "descr": "В состав комбо входят 10 пицц размером M, а также 3л. напитка на выбор, и 10 соусов.",
+      "price": 5000
+    },
+    {
+      "id": 4,
+      "imageUrl": "http://papapizza59.ru/image/cache/catalog/kombo/gt-350x350.jpg",
+      "name": "Горячее трио",
+      "descr": "Выбери 3 пиццы одного размера на пышном тесте, 3 соуса и 1 напиток по специальной цене.",
+      "price": 1250
+    }
+  ]
 }

@@ -25,9 +25,9 @@ function PizzaModals({active, setActive, name, imageUrl, price, descr}) {
                 <div className="modal__content_pizza">
                     <img src={imageUrl} alt={name}/>
                     <div className="modal__content_des">
-                        <h4 className="pizza-block__title">{name}</h4>
-                        <div className="pizza-block__descr">{descr}</div>
-                        <div className="pizza-block__selector">
+                        <h4 className="items-block__title">{name}</h4>
+                        <div className="items-block__descr">{descr}</div>
+                        <div className="items-block__selector">
                             <ul>
                             {availableTypes.map((type, index) => (
                                 <li 
@@ -53,8 +53,8 @@ function PizzaModals({active, setActive, name, imageUrl, price, descr}) {
                             ))}
                             </ul>
                         </div>
-                        <div className="pizza-block__bottom">
-                            <div className="pizza-block__price">{price[0]} ₽</div>
+                        <div className="items-block__bottom">
+                            <div className="items-block__price">{price[0]} ₽</div>
                             <Button className="button--add" outline>
                                 <svg
                                     width="12"

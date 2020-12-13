@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Header} from './components';
-import {Home, Cart} from './pages';
+import {Home, Cart, Combo, Drink, Sauce, Snacks} from './pages';
 import {Route} from 'react-router-dom';
 
 
@@ -12,6 +12,10 @@ function App() {
         <div className="content">
           <Route path="/" component={Home} exact/>
           <Route path="/cart" component={Cart} exact/>
+          <Route path="/combo" component={Combo} exact/>
+          <Route path="/drink" component={Drink} exact/>
+          <Route path="/sauce" component={Sauce} exact/>
+          <Route path="/snacks" component={Snacks} exact/>
         </div>
     </div>
   )

@@ -2,9 +2,9 @@ const initialState = {
     items: []
 };
 
-const pizzas = (state = initialState, action) => {
+const snacks = (state = initialState, action) => {
     switch (action.type) {
-        case 'SET_PIZZAS':
+        case 'SET_SNACKS':
             return {
                 ...state,
                 items: action.payload,
@@ -15,4 +15,4 @@ const pizzas = (state = initialState, action) => {
     }
 };
 
-export default pizzas;
+export default snacks;
