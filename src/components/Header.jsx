@@ -1,11 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Categories from './Categories/Categories';
+import Categories from './Categories';
+import {useSelector, useDispatch} from 'react-redux';
+import {setCategory} from '../redux/action/filters';
+import { useEffect, useState } from "react";
 
 import logoSvg from '../assets/img/pizza-logo.jpg';
 import pizza from '../assets/img/pizza.gif';
 
+const categoryNames = [{name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}];
+
 function Header() {
+    const dispatch = useDispatch();
+    const {category} = useSelector(({filters}) => filters);
+
+    const onSelectCategory = React.useCallback((index) => {
+        dispatch(setCategory(index));
+      }, []);
+
+    const fixedText = "I am fixed :)";
+    const whenNotFixed = "I am not a fixed header :(";
+    const [headerText, setHeaderText] = useState(whenNotFixed);
+    useEffect(() => {
+    const header = document.getElementById("myHeader");
+    const sticky = header.offsetTop;
+    const scrollCallBack = window.addEventListener("scroll", () => {
+        if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+        if (headerText !== fixedText) {
+            setHeaderText(fixedText);
+        }
+        } else {
+        header.classList.remove("sticky");
+        if (headerText !== whenNotFixed) {
+            setHeaderText(whenNotFixed);
+        }
+        }
+    });
+        return () => {
+        window.removeEventListener("scroll", scrollCallBack);
+        };
+    }, []);
 
     return (
         <div className="header">
@@ -13,13 +48,13 @@ function Header() {
                 <Link to="/">
                     <div className="header__logo">
                         <img width="150" src={logoSvg} alt="Pizza logo" />
-                    </div>
+                    </div>   
                 </Link>
             </div>
             <div className="container">
-                <div className="header__fixed">
-                    <Categories/>
-                    <div className="header__cart">
+                <div id="myHeader" className="header__fixed">
+                    <Categories activeCategory={category} onClickCategory={onSelectCategory} items={categoryNames}/>
+                    <div  className="header__cart">
                         <Link to="/cart">
                             <button className="button outline">
                                 <a href="/cart.html" className="button button--cart">
