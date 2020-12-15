@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Categories from './Categories';
 import {useSelector, useDispatch} from 'react-redux';
 import {setCategory} from '../redux/action/filters';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import logoSvg from '../assets/img/pizza-logo.jpg';
 import pizza from '../assets/img/pizza.gif';
@@ -16,27 +16,22 @@ function Header() {
 
     const onSelectCategory = React.useCallback((index) => {
         dispatch(setCategory(index));
-      }, []);
+    }, []);
 
-    const fixedText = "I am fixed :)";
-    const whenNotFixed = "I am not a fixed header :(";
-    const [headerText, setHeaderText] = useState(whenNotFixed);
     useEffect(() => {
-    const header = document.getElementById("myHeader");
-    const sticky = header.offsetTop;
-    const scrollCallBack = window.addEventListener("scroll", () => {
-        if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-        if (headerText !== fixedText) {
-            setHeaderText(fixedText);
-        }
-        } else {
-        header.classList.remove("sticky");
-        if (headerText !== whenNotFixed) {
-            setHeaderText(whenNotFixed);
-        }
-        }
-    });
+        const header = document.getElementById("myHeader");
+        const logo = document.getElementById("logo");
+
+        const sticky = header.offsetTop;
+        const scrollCallBack = window.addEventListener("scroll", () => {
+            if (window.pageYOffset >= sticky + 50) {
+            header.classList.add("sticky");
+            logo.style.display = 'block';
+            } else {
+            header.classList.remove("sticky");
+            logo.style.display = 'none';
+            }
+        });
         return () => {
         window.removeEventListener("scroll", scrollCallBack);
         };
@@ -53,6 +48,7 @@ function Header() {
             </div>
             <div className="container">
                 <div id="myHeader" className="header__fixed">
+                    <img id="logo" className="logo_mini" width="100" src={logoSvg} alt="logo"></img>
                     <Categories activeCategory={category} onClickCategory={onSelectCategory} items={categoryNames}/>
                     <div  className="header__cart">
                         <Link to="/cart">

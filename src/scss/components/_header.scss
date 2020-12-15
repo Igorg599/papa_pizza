@@ -37,10 +37,16 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: calc(0.87*(100vw - 100px));
+  }
+
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.logo_mini {
+  display: none;
 }
+
