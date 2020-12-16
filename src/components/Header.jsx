@@ -11,6 +11,11 @@ import pizza from '../assets/img/pizza.gif';
 const categoryNames = [{name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}];
 
 function Header() {
+    const {totalPrice, totalCount} = useSelector(({cart}) => ({
+        totalPrice: cart.totalPrice,
+        totalCount: cart.totalCount,
+    }));
+
     const dispatch = useDispatch();
     const {category} = useSelector(({filters}) => filters);
 
@@ -26,6 +31,7 @@ function Header() {
         const scrollCallBack = window.addEventListener("scroll", () => {
             if (window.pageYOffset >= sticky + 50) {
             header.classList.add("sticky");
+            logo.style.transition = '1s';
             logo.style.display = 'block';
             } else {
             header.classList.remove("sticky");
@@ -54,7 +60,7 @@ function Header() {
                         <Link to="/cart">
                             <button className="button outline">
                                 <a href="/cart.html" className="button button--cart">
-                                    <span>0 ₽</span>
+                                    <span>{totalPrice} ₽</span>
                                     <div className="button__delimiter"></div>
                                     <svg className="header__cart_svg"
                                         width="30"
@@ -86,7 +92,7 @@ function Header() {
                                         />
                                     </svg>
                                     <img className="header__arrow_svg" width="30" src={pizza} alt="PIZZA"/>
-                                    <span></span>
+                                    <span>{totalCount}</span>
                                 </a>                         
                             </button>
                         </Link>                    

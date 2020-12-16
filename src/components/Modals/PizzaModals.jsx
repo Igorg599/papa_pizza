@@ -2,12 +2,12 @@ import React from 'react';
 import Button from '../Button';
 import classNames from 'classnames';
 
-function PizzaModals({active, setActive, name, imageUrl, price, descr}) {
+function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onClickAddPizza, addedCount}) {
     const availableTypes = ['Пышное', 'Тонкое'];
-    const availableSizes = [23,29,38,40];
+    const availableSizes = ['S (23-25 см)', 'M (28-30 см)', 'L (38-40 см)'];
 
     const [activeType, setActiveType] = React.useState(0);
-    const [activeSize, setActiveSize] = React.useState(0);
+    const [activeSize, setActiveSize] = React.useState(1);
 
     const onSelectType = (index) => {
         setActiveType(index);
@@ -16,6 +16,18 @@ function PizzaModals({active, setActive, name, imageUrl, price, descr}) {
     const onSelectSize = (index) => {
         setActiveSize(index);
     };
+
+    const onAddPizza = () => {
+        const obj = {
+          id: `${id}_${activeSize}_${activeType}`,
+          name,
+          imageUrl,
+          price: price[activeSize],
+          size: availableSizes[activeSize],
+          type: availableTypes[activeType]
+        };
+        onClickAddPizza(obj);
+      };
 
 
     return (
@@ -48,14 +60,13 @@ function PizzaModals({active, setActive, name, imageUrl, price, descr}) {
                                 className={classNames({
                                     active: activeSize === index,
                                 })}>
-                                    {size} см.
+                                    {size}
                                 </li>
                             ))}
                             </ul>
                         </div>
                         <div className="items-block__bottom">
-                            <div className="items-block__price">{price[0]} ₽</div>
-                            <Button className="button--add" outline>
+                            <Button onClick={onAddPizza} className="button--add" outline>
                                 <svg
                                     width="12"
                                     height="12"
@@ -68,7 +79,8 @@ function PizzaModals({active, setActive, name, imageUrl, price, descr}) {
                                     fill="white"
                                     />
                                 </svg>
-                                <span>Добавить</span>
+                                <span onClick={() => setActive(false)}>Добавить в корзину за {price[activeSize]} ₽</span>
+                                {addedCount && <i>{addedCount}</i>}
                             </Button>
                          </div>
                     </div>

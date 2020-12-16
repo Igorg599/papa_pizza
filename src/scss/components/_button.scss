@@ -4,7 +4,7 @@
   display: inline-block;
   background-color: $orange;
   border-radius: 33px;
-  padding: 3px 7px;
+  padding: 3px 6px;
   min-width: 100px;
   text-align: center;
   cursor: pointer;
@@ -96,13 +96,14 @@
   }
 
   &--add {
+    bottom: 11px;
     svg {
       margin-right: 2px;
     }
 
     span {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 19px;
     }
 
     &:hover {
@@ -133,7 +134,7 @@
     display: flex;
     align-items: center;
     line-height: 23px;
-    padding: 7px 22px;
+    padding: 2px 11px;
 
     svg {
       margin-right: 8px;

@@ -22,8 +22,6 @@
   }
 
   &__logo {
-    position: sticky;
-    top: 0;
     display: flex;
     height: 70px;
 
@@ -41,12 +39,14 @@
   .sticky {
     position: fixed;
     top: 0;
-    width: calc(0.87*(100vw - 100px));
+    width: 87vw;
+    padding-right: 10%;
   }
 
 }
 
 .logo_mini {
   display: none;
+  margin-bottom: 5px;
 }
 

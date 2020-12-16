@@ -5,10 +5,18 @@ import {fetchPizzas} from '../redux/action/pizzas';
 
 function Home() {
   const dispatch = useDispatch();
+  const cartItems = useSelector(({cart}) => cart.items);
   const items = useSelector(({pizzas}) => pizzas.items);
   React.useEffect(() => {
     dispatch(fetchPizzas());
   }, []);
+
+  const handleAddPizzaToCart = (obj) => {
+    dispatch({
+      type: 'ADD_PIZZA_CART',
+      payload: obj
+    });
+  };
 
   return (
     <div className="container">
@@ -16,7 +24,10 @@ function Home() {
           {
             items.map(obj => 
             <PizzaBlock 
+            onClickAddPizza={handleAddPizzaToCart} 
             key={obj.id}
+            addedCount={cartItems[obj.id] && 
+            cartItems[obj.id].items.length}
             {...obj}/>)
           }
         </div>
