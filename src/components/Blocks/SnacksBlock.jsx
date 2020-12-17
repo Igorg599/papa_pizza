@@ -4,7 +4,17 @@ import Button from '../Button';
 
 
 function SnacksBlock(obj) {
-  const {name, imageUrl, price, descr} = obj;
+  const {id, name, imageUrl, price, descr, onClickAddSnacks, addedCount} = obj;
+
+  const onAddSauce = () => {
+    const obj = {
+      id,
+      name,
+      imageUrl,
+      price,
+    };
+    onClickAddSnacks(obj);
+  };
 
   return (
     <>
@@ -18,8 +28,9 @@ function SnacksBlock(obj) {
         <div className="items-block__descr">{descr}</div>
         <div className="items-block__bottom">
           <div className="items-block__price">{price} ₽</div>
-          <Button className="button--add" outline>
+          <Button onClick={onAddSauce} className="button--add" outline>
             <span>Выбрать</span>
+            {addedCount && <i>{addedCount}</i>}
           </Button>
         </div>
       </div> 

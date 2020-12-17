@@ -10,7 +10,6 @@ import cartImg from '../assets/img/empty-cart.png';
 function Cart() {
   const dispatch = useDispatch();
   const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
-  const {category} = useSelector(({filters}) => filters);
 
   const onClickCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
@@ -71,6 +70,7 @@ function Cart() {
                 <CartItem 
                 key={obj.id}
                 id={obj.id}
+                img={obj.imageUrl}
                 name={obj.name} 
                 type={obj.type} 
                 size={obj.size} 

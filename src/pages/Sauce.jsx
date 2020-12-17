@@ -6,9 +6,18 @@ import {fetchSauce} from '../redux/action/sauce';
 function Sauce() {
     const dispatch = useDispatch();
     const items = useSelector(({sauce}) => sauce.items);
+    const cartItems = useSelector(({cart}) => cart.items);
     React.useEffect(() => {
       dispatch(fetchSauce());
     }, []);
+
+    const handleAddSauceToCart = (obj) => {
+      dispatch({
+        type: 'ADD_PIZZA_CART',
+        payload: obj
+      });
+    }
+
   
     return (
       <div className="container">
@@ -16,7 +25,9 @@ function Sauce() {
             {
               items.map(obj => 
               <SauceBlock 
+              onClickAddSauce={handleAddSauceToCart} 
               key={obj.id}
+              addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
               {...obj}/>)
             }
           </div>

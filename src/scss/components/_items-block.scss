@@ -116,7 +116,7 @@
       position: relative;
       height: 160px;
       width: calc(33.3333% - 8px);
-      box-shadow: rgba(6, 5, 50, 0.12) 0px 4px 20px;
+      box-shadow: rgba(11, 161, 44, 0.12) 0px 4px 20px;
       display: flex;
       -webkit-box-align: center;
       align-items: center;
@@ -133,6 +133,12 @@
       transition: box-shadow 150ms ease-out 0s, border;
     }
 
+    &-button.active {
+      border-color: rgb(255, 105, 0);
+      transform: translateY(2px);
+      transition: .3s;
+    }
+
     &-img{
       height: 80px;
       flex: 0 0 auto;
@@ -140,6 +146,7 @@
 
     &-title {
       font-size: 12px;
+      font-weight: 600;
       line-height: 16px;
       height: 32px;
       flex: 1 0 auto;
@@ -153,6 +160,7 @@
 
     &-money {
       font-size: 18px;
+      font-weight: 700;
       line-height: 20px;
       flex: 0 0 auto;
       margin: 6px;
@@ -165,5 +173,9 @@
       opacity: 0;
       transition: opacity 150ms ease-out 0s;
     }
+  }
+
+  &__dop-icon.active {
+    opacity: 1;
   }
 }
