@@ -9,9 +9,6 @@ function Categories({activeCategory, items, onClickCategory}) {
         <div className="content__top">
           <div className="categories">
               <ul>
-              <Link to="/">
-                <li className={activeCategory === null ? 'active' : ''} onClick={() => onClickCategory(null)}>Пицца</li>
-              </Link>
               {items &&
               items.map((item, index) => 
               (

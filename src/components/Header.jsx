@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import logoSvg from '../assets/img/pizza-logo.jpg';
 import pizza from '../assets/img/pizza.gif';
 
-const categoryNames = [{name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}];
+const categoryNames = [{name: 'Пицца', path: '/'}, {name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Пицца за час!', path: '/hour'}];
 
 function Header() {
     const {totalPrice, totalCount} = useSelector(({cart}) => ({
@@ -58,7 +58,7 @@ function Header() {
                     <Categories activeCategory={category} onClickCategory={onSelectCategory} items={categoryNames}/>
                     <div  className="header__cart">
                         <Link to="/cart">
-                            <button className="button outline">
+                            <button onClick={() => onSelectCategory(88)} className="button outline">
                                 <a href="/cart.html" className="button button--cart">
                                     <span>{totalPrice} ₽</span>
                                     <div className="button__delimiter"></div>
