@@ -1,0 +1,19 @@
+.about {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &__des {
+        text-align: center;
+        font-size: 18px;
+        line-height: 25px;
+        margin: 20px 0;
+    }
+}

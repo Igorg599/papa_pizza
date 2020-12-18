@@ -1,13 +1,14 @@
 import React from 'react';
 
-import {Header} from './components';
-import {Home, Cart, Combo, Drink, Sauce, Snacks, Hour} from './pages';
+import {Header, Footer} from './components';
+import {Home, Cart, Combo, Drink, Sauce, Snacks, Hour, About, Condition, Politics, Offer, Money} from './pages';
 import {Route} from 'react-router-dom';
 
 
 function App() {
   return(
-    <div className="wrapper">
+    <>
+      <div className="wrapper">
         <Header/>
         <div className="content">
           <Route path="/" component={Home} exact/>
@@ -17,8 +18,15 @@ function App() {
           <Route path="/sauce" component={Sauce} exact/>
           <Route path="/snacks" component={Snacks} exact/>
           <Route path="/hour" component={Hour} exact/>
+          <Route path="/about" component={About} exact/>
+          <Route path="/condition" component={Condition} exact/>
+          <Route path="/politics" component={Politics} exact/>
+          <Route path="/offer" component={Offer} exact/>
+          <Route path="/money" component={Money} exact/>
         </div>
-    </div>
+      </div>
+      <Footer/>
+    </>
   )
 }
 

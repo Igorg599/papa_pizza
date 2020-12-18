@@ -25,7 +25,7 @@ const CartItem = ({id, name, type, size, img, totalPrice, totalCount, onRemove, 
             </div>
             <div className="cart__item-info">
                 <h3>{name}</h3>
-                <p>{type} {size}</p>
+                <p>{size} {type}</p>
             </div>
             <div className="cart__item-count">
                 <div onClick={handleMinusItem} className="button button--outline button--circle cart__item-count-minus">

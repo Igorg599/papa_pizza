@@ -8,11 +8,14 @@
   html {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
+    position: relative;
+    min-height: 100%;
   }
 }
 
 body {
   background-color: #ffffff;
+  padding: 0 0 150px 0;
 }
 
 .wrapper {
@@ -25,7 +28,7 @@ body {
 }
 
 .content {
-  padding: 40px 0;
+  padding: 20px 0;
 
   &__title {
     margin: 35px 0;
@@ -117,8 +120,8 @@ body {
     display: flex;
     width: 100%;
     border-top: 1px solid $gray-line;
-    padding-top: 30px;
-    margin-top: 30px;
+    padding-top: 15px;
+    margin-top: 15px;
 
     &-img {
       display: flex;
@@ -139,13 +142,13 @@ body {
 
       h3 {
         font-weight: bold;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 27px;
         letter-spacing: 0.01em;
       }
 
       p {
-        font-size: 18px;
+        font-size: 15px;
         color: #8d8d8d;
       }
     }

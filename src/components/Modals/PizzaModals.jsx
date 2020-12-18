@@ -15,6 +15,8 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
 
     const [activeType, setActiveType] = React.useState(0);
     const [activeSize, setActiveSize] = React.useState(1);
+    const [activeDops, setActiveDops] = React.useState(0);
+
 
     const onSelectType = (index) => {
         setActiveType(index);
@@ -24,12 +26,16 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
         setActiveSize(index);
     };
 
+    function handleAddDopToCart(item) {
+        setActiveDops( activeDops + item);
+    }
+
     const onAddPizza = () => {
         const obj = {
           id: `${id}_${activeSize}_${activeType}`,
           name,
           imageUrl,
-          price: price[activeSize],
+          price: price[activeSize] + activeDops,
           size: availableSizes[activeSize],
           type: availableTypes[activeType]
         };
@@ -77,7 +83,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                         <h4 className="items-block__plus">Добавить в пиццу</h4>
                         <div className="items-block__dop">
                             {DopItems.map((item) => (
-                                <DopBlock item={item}/>
+                                <DopBlock item={item} onClickAddDop={handleAddDopToCart}/>
                             ))}
                         </div>
                         <div className="items-block__bottom">
@@ -94,7 +100,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                                     fill="white"
                                     />
                                 </svg>
-                                <span onClick={() => setActive(false)}>Добавить в корзину за {price[activeSize]} ₽</span>
+                                <span onClick={() => setActive(false)}>Добавить в корзину за {price[activeSize] + activeDops} ₽</span>
                             </Button>
                          </div>
                     </div>

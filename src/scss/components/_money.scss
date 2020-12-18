@@ -1,0 +1,24 @@
+.money {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &__des1 {
+        text-align: start;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    &__des2 {
+        text-align: start;
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
