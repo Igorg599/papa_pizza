@@ -25,3 +25,5 @@
 "commit-12" - создан компонент Footer c компонентами внутри него.
 
 "commit-13" - доработка компонента Footer, создан компонент Popular, LoadingBlock.
+
+"commit-14" - созданы файлы server.js и Procfile для заливки проекта на Heroku.
