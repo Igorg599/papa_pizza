@@ -1,5 +1,6 @@
 const initialState = {
-    items: []
+    items: [],
+    isLoaded: false
 };
 
 const drink = (state = initialState, action) => {
@@ -8,6 +9,13 @@ const drink = (state = initialState, action) => {
             return {
                 ...state,
                 items: action.payload,
+                isLoaded: true
+            };
+
+        case 'SET_LOADED_DRINK':
+            return {
+                ...state,
+                isLoaded: action.payload
             };
         
         default:

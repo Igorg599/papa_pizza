@@ -37,9 +37,11 @@
   }
 
   .sticky {
+    left: 10vw;
     position: fixed;
     top: 0;
-    width: 89vw;
+    z-index: 1000;
+    width: 90vw;
     padding-right: 10%;
   }
 

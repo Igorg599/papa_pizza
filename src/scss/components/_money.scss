@@ -4,20 +4,34 @@
     text-align: center;
 
     &__title {
-        text-align: center;
         font-size: 28px;
         font-weight: 700;
         margin-bottom: 30px;
     }
 
-    &__des1 {
+    &__block {
+        display: flex;
+        justify-content: start;
+    }
+
+    &__block img{
+        height: 150px;
+    }
+
+    &__descr {
+        display: block;
         text-align: start;
-        font-size: 18px;
+    }
+
+    &__desc1 {
+        margin-top: 33px;
+        font-weight: 700;
+        font-size: 22px;
         line-height: 25px;
     }
 
-    &__des2 {
-        text-align: start;
+    &__desc2 {
+        margin-top: 5px;
         font-size: 15px;
         line-height: 20px;
     }

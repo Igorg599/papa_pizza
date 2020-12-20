@@ -5,16 +5,20 @@ function DopBlock({item, onClickAddDop}) {
     const {name, img, price} = item;
     const [activeIcon, setActiveIcon] = React.useState(false);
 
-    let dopItem = 0;
+    let dopItemPrice = 0;
+    let dopItemName;
+
 
     const dopItemSet = () => {
         setActiveIcon(!activeIcon);
         if (activeIcon === false) {
-            dopItem = price;
+            dopItemPrice = price;
+            dopItemName = name;
         } else {
-            dopItem = -price;
+            dopItemPrice = -price;
+            dopItemName = name;
         }
-        onClickAddDop(dopItem);
+        onClickAddDop(dopItemPrice, dopItemName);
     }
 
     return (

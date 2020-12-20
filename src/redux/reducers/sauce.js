@@ -1,5 +1,6 @@
 const initialState = {
-    items: []
+    items: [],
+    isLoaded: false
 };
 
 const sauce = (state = initialState, action) => {
@@ -8,7 +9,14 @@ const sauce = (state = initialState, action) => {
             return {
                 ...state,
                 items: action.payload,
+                isLoaded: true
             };
+
+        case 'SET_LOADED_SAUCE':
+            return {
+                ...state,
+                isLoaded: action.payload
+            };    
         
         default:
             return state;

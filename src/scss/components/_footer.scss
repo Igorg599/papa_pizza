@@ -1,6 +1,6 @@
 .footer {
     background-color: rgb(170, 119, 119);
-    min-height: 150px;
+    min-height: 110px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -28,5 +28,32 @@
             transition: 0.3s;
             }
         }
+    }
+
+    &__solid {
+        border-bottom: 1px solid rgb(16, 17, 14);
+        margin-top: 40px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 11px 30px;
+    }
+
+    &__rights {
+        margin-top: 2px;
+        font-size: 22px;
+        color:rgb(46, 39, 39)
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo img {
+        margin-right: 20px;
+        height: 30px;
     }
 }

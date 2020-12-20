@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import logoSvg from '../assets/img/pizza-logo.jpg';
 import pizza from '../assets/img/pizza.gif';
 
-const categoryNames = [{name: 'Пицца', path: '/'}, {name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Пицца за час!', path: '/hour'}];
+const categoryNames = [{name: 'Пицца', path: '/'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Пицца за час!', path: '/hour'}];
 
 function Header() {
     const {totalPrice, totalCount} = useSelector(({cart}) => ({
@@ -104,3 +104,5 @@ function Header() {
 }
 
 export default Header;
+
+// {name: 'Комбо', path: '/combo'},

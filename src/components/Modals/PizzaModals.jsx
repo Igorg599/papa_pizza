@@ -15,7 +15,8 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
 
     const [activeType, setActiveType] = React.useState(0);
     const [activeSize, setActiveSize] = React.useState(1);
-    const [activeDops, setActiveDops] = React.useState(0);
+    const [activeDopsPrice, setActiveDopsPrice] = React.useState(0);
+    const [activeDopsName, setActiveDopsName] = React.useState('');
 
 
     const onSelectType = (index) => {
@@ -26,8 +27,14 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
         setActiveSize(index);
     };
 
-    function handleAddDopToCart(item) {
-        setActiveDops( activeDops + item);
+    function handleAddDopToCart(price, name) {
+        setActiveDopsPrice(activeDopsPrice + price);
+        if (price > 0) {
+            setActiveDopsName(activeDopsName + name);
+        } if (price < 0) {
+            setActiveDopsName(activeDopsName.replace(/name/g, ''));
+        }
+        console.log(activeDopsName);
     }
 
     const onAddPizza = () => {
@@ -35,9 +42,9 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
           id: `${id}_${activeSize}_${activeType}`,
           name,
           imageUrl,
-          price: price[activeSize] + activeDops,
+          price: price[activeSize] + activeDopsPrice,
           size: availableSizes[activeSize],
-          type: availableTypes[activeType]
+          type: availableTypes[activeType],
         };
         onClickAddPizza(obj);
       };
@@ -100,7 +107,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                                     fill="white"
                                     />
                                 </svg>
-                                <span onClick={() => setActive(false)}>Добавить в корзину за {price[activeSize] + activeDops} ₽</span>
+                                <span onClick={() => setActive(false)}>Добавить в корзину за {price[activeSize] + activeDopsPrice} ₽</span>
                             </Button>
                          </div>
                     </div>
