@@ -25,7 +25,7 @@
         "rating": 1
       },
       {
-        "id": 1,
+        "id": 4,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
         "name": "Пепперони Фреш с перцем",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -33,7 +33,7 @@
         "rating": 0
       },
       {
-        "id": 2,
+        "id": 5,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
         "name": "Сырная",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -41,7 +41,7 @@
         "rating": 0
       },
       {
-        "id": 3,
+        "id": 6,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
         "name": "Цыпленок барбекю",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -49,7 +49,7 @@
         "rating": 0
       },
       {
-        "id": 1,
+        "id": 7,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
         "name": "Пепперони Фреш с перцем",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -57,7 +57,7 @@
         "rating": 0
       },
       {
-        "id": 2,
+        "id": 8,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
         "name": "Сырная",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -65,7 +65,7 @@
         "rating": 1
       },
       {
-        "id": 3,
+        "id": 9,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
         "name": "Цыпленок барбекю",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -73,7 +73,7 @@
         "rating": 0
       },
       {
-        "id": 1,
+        "id": 10,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
         "name": "Пепперони Фреш с перцем",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -81,7 +81,7 @@
         "rating": 0
       },
       {
-        "id": 2,
+        "id": 11,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
         "name": "Сырная",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",
@@ -89,7 +89,7 @@
         "rating": 0
       },
       {
-        "id": 3,
+        "id": 12,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
         "name": "Цыпленок барбекю",
         "descr": "Cоус «Мутти», сыры: «Моцарелла», «Чеддер», «Гауда», «Фета», шампиньоны, ветчина, томаты, колбаски «Пепперони».",

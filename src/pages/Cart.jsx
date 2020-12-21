@@ -71,7 +71,8 @@ function Cart() {
                 img={obj.imageUrl}
                 name={obj.name} 
                 type={obj.type} 
-                size={obj.size} 
+                size={obj.size}
+                dopsName={obj.dopsName} 
                 totalPrice={items[obj.id].totalPrice}
                 totalCount={items[obj.id].items.length}
                 onRemove={onRemoveItem}

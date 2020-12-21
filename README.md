@@ -27,3 +27,5 @@
 "commit-13" - доработка компонента Footer, создан компонент Popular, LoadingBlock.
 
 "commit-14" - созданы файлы server.js и Procfile для заливки проекта на Heroku.
+
+"commit-15" - доработка функционала компонента DopBlock (выбранные элементы добавляются в Redux и оттуда в Компонент CartItem).

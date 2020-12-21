@@ -1,16 +1,17 @@
 @import 'variables';
 
 .items-block {
+  position: relative;
   width: 280px;
   text-align: center;
   margin-bottom: 25px;
   margin-top: 15px;
-  padding: 3px;
+  padding: 3px 3px 55px 3px;
 
   &:hover {
     border: 1px solid rgb(245, 224, 224);
     border-radius: 11px;
-    padding: 2px;
+    padding: 2px 2px 54px 2px;
   }
 
   &:not(:nth-of-type(4n)) {
@@ -37,6 +38,16 @@
   }
 
   &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 5px;
+    width: 275px;
+  }
+
+  &__bottom--modal {
     display: flex;
     align-items: center;
     justify-content: space-between;

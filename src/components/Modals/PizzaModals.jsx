@@ -11,12 +11,12 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
     const availableTypes = ['Пышное', 'Тонкое'];
     const availableSizes = ['S (23-25 см)', 'M (28-30 см)', 'L (38-40 см)'];
 
-    const DopItems = [{name: 'Халапенью (30 гр.)', price: 50, img: Hala}, {name: 'Сыр (50 гр.)', price: 50, img: Cheesee}, {name: 'Сыр (100 гр.)', price: 80, img: CheeseeMore}];
+    const DopItems = [{name: ' Халапенью (30 гр.)', price: 50, img: Hala}, {name: ' Сыр (50 гр.)', price: 50, img: Cheesee}, {name: ' Сыр (100 гр.)', price: 80, img: CheeseeMore}];
 
     const [activeType, setActiveType] = React.useState(0);
     const [activeSize, setActiveSize] = React.useState(1);
     const [activeDopsPrice, setActiveDopsPrice] = React.useState(0);
-    const [activeDopsName, setActiveDopsName] = React.useState('');
+    const [activeDopsName, setActiveDopsName] = React.useState([]);
 
 
     const onSelectType = (index) => {
@@ -30,11 +30,10 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
     function handleAddDopToCart(price, name) {
         setActiveDopsPrice(activeDopsPrice + price);
         if (price > 0) {
-            setActiveDopsName(activeDopsName + name);
-        } if (price < 0) {
-            setActiveDopsName(activeDopsName.replace(/name/g, ''));
+            setActiveDopsName([...activeDopsName, name]);
+        } else {
+            setActiveDopsName(activeDopsName.filter(item => item !== name));
         }
-        console.log(activeDopsName);
     }
 
     const onAddPizza = () => {
@@ -45,7 +44,9 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
           price: price[activeSize] + activeDopsPrice,
           size: availableSizes[activeSize],
           type: availableTypes[activeType],
+          dopsName: activeDopsName
         };
+        console.log(obj);
         onClickAddPizza(obj);
       };
 
@@ -89,11 +90,11 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                         </div>
                         <h4 className="items-block__plus">Добавить в пиццу</h4>
                         <div className="items-block__dop">
-                            {DopItems.map((item) => (
-                                <DopBlock item={item} onClickAddDop={handleAddDopToCart}/>
+                            {DopItems.map((item, index) => (
+                                <DopBlock key={index} item={item} onClickAddDop={handleAddDopToCart}/>
                             ))}
                         </div>
-                        <div className="items-block__bottom">
+                        <div className="items-block__bottom--modal">
                             <Button onClick={onAddPizza} className="button--add" outline>
                                 <svg
                                     width="12"

@@ -13,8 +13,8 @@ function Footer() {
         <div className="footer">
             <div className="container">
                 <ul>
-                    {bottomCategory.map((item) => (
-                        <Link to={item.path}>
+                    {bottomCategory.map((item, index) => (
+                        <Link key={index} to={item.path}>
                         <li>{item.name}</li>
                         </Link>
                     ))}
