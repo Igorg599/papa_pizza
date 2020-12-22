@@ -5,7 +5,6 @@ import pizzas from './pizzas';
 import drink from './drink';
 import sauce from './sauce';
 import snacks from './snacks';
-import combo from './combo';
 import cart from './cart';
 
 
@@ -15,7 +14,6 @@ const rootReducer = combineReducers({
     drink,
     sauce,
     snacks,
-    combo,
     cart
 });
 

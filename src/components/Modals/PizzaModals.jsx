@@ -38,7 +38,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
 
     const onAddPizza = () => {
         const obj = {
-          id: `${id}_${activeSize}_${activeType}`,
+          id: `${id}_${activeSize}_${activeType}_${activeDopsName}`,
           name,
           imageUrl,
           price: price[activeSize] + activeDopsPrice,
@@ -94,7 +94,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                                 <DopBlock key={index} item={item} onClickAddDop={handleAddDopToCart}/>
                             ))}
                         </div>
-                        <div className="items-block__bottom--modal">
+                        <div onClick={() => setActive(false)} className="items-block__bottom--modal">
                             <Button onClick={onAddPizza} className="button--add" outline>
                                 <svg
                                     width="12"
@@ -108,7 +108,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                                     fill="white"
                                     />
                                 </svg>
-                                <span onClick={() => setActive(false)}>Добавить в корзину за {price[activeSize] + activeDopsPrice} ₽</span>
+                                <span>Добавить в корзину за {price[activeSize] + activeDopsPrice} ₽</span>
                             </Button>
                          </div>
                     </div>

@@ -43,6 +43,26 @@
         flex-direction: column;
         width: 320px;
     }
+
+    &_combo {
+        display: flex;
+        justify-content: space-between;
+        &--des {
+            background: rgb(252, 252, 252);
+            height: 440px;
+            width: 370px;
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            z-index: 1;
+            h3 {
+                margin: 0 auto 10px auto;
+            }
+        }
+
+    }
 }
 
 .modal__content.active {
