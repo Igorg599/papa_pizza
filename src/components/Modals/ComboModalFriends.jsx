@@ -10,8 +10,15 @@ function ComboModalFriends({itemsPizza, itemsDrink, itemsSauce, setActive, activ
                 <div className="modal__content_combo">
                     <div className="modal__content_combo--des">
                         <h3>Комбо "Для друзей"</h3>
-                        <div className="items-block__descr">В состав комбо входят 5 пицц размером M, 2 л. напитка на выбор и 5 соусов.</div>
-                        <div className="items-block__descr">Вес: 4,000.00 г</div>
+                        <div className="modal__content_combo--descr">В состав комбо входят 5 пицц размером M (4,000.00 гр.), 2 л. напитка на выбор и 5 соусов.</div>
+                    </div>
+                    <div className="modal__content_combo--pizza">
+                        {itemsPizza.map((item, index) => (
+                            <div className="modal__content_combo--pizza-block" key={index}>
+                            <img src={item.imageUrl} alt="pizza"/>
+                            <h4>{item.name}</h4>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
