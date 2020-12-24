@@ -57,7 +57,17 @@
             z-index: 1;
             h3 {
                 margin: 0 auto 5px auto;
+                font-size: 20px;
             }
+        }
+        h5 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        h6 {
+            padding: 10px 0 0 0;
+            font-size: 18px;
+            text-align: center;
         }
         &--descr {
             margin: 0 auto 0px auto;
@@ -66,43 +76,72 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 3px;
             width: 790px;
             &-block {
+                position: relative;
                 font-size: 12px;
                 font-weight: 600;
                 line-height: 13px;
                 width: 120px;
-                height: 45px;
-                margin-bottom: 8px;
+                height: 44px;
+                margin-bottom: 2px;
                 margin-right: 3px;
                 cursor: pointer;
-                padding: 3px;
+                padding: 1px;
                 background: rgb(255, 255, 255);
                 border-radius: 11px;
-                transition: box-shadow 0.15s ease-in-out 0s, border-color;
+                box-shadow: rgba(130, 127, 175, 0.2) 0px 4px 20px;
+                transition: box-shadow 0.33s ease-in-out 0s, border-color;
                 border-width: 1px;
                 border-style: solid;
                 border-image: initial;
                 overflow: hidden;
                 display: flex;
-                justify-content: start;
+                justify-content: space-around;
                 border-color: rgb(211, 208, 206);
                 img {
-                    width: 40px;
+                    height: 37px;
                 }
                 h4 {
                     margin-left: 3px;
-                    margin-top: 1px;
                 }
                 &:hover {
-                    box-shadow: rgba(28, 20, 139, 0.2) 0px 4px 20px;
+                    box-shadow: rgba(212, 93, 24, 0.5) 0px 4px 20px;
+                }
+                &-icon {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 1px;
+                    opacity: 0;
+                    transition: opacity 150ms ease-out 0s;
+                }
+                &-icon.active {
+                    opacity: 1;
                 }
             }
             &-block.active {
                 border-color: rgb(255, 105, 0);
                 transition: .5s;
-              }
+            }
+        }
+        &-bottom {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &-left {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 395px;
+            }
+            &-right {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 395px;
+            }
         }
 
     }
@@ -111,7 +150,6 @@
 .modal__content.active {
     transform: scale(1);
 }
-
 
 .cl-btn-4 {
     left: 445px;    

@@ -72,6 +72,9 @@ function Cart() {
                 name={obj.name} 
                 type={obj.type} 
                 size={obj.size}
+                pizza={obj.pizza}
+                drink={obj.drink}
+                sauce={obj.sauce}
                 dopsName={obj.dopsName} 
                 totalPrice={items[obj.id].totalPrice}
                 totalCount={items[obj.id].items.length}

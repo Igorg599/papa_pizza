@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 
-const CartItem = ({id, name, type, size, img, totalPrice, totalCount, onRemove, onMinus, onPlus, dopsName}) => {
+const CartItem = ({id, name, type, size, img, totalPrice, totalCount, pizza, sauce, drink, onRemove, onMinus, onPlus, dopsName}) => {
     const handleRemoveClick = () => {
         onRemove(id);
     }
@@ -27,6 +27,9 @@ const CartItem = ({id, name, type, size, img, totalPrice, totalCount, onRemove, 
                 <h3>{name}</h3>
                 <p>{size} {type}</p>
                 <p>{dopsName}</p>
+                <p>{pizza}</p>
+                <p>{sauce}</p>
+                <p>{drink}</p>
             </div>
             <div className="cart__item-count">
                 <div onClick={handleMinusItem} className="button button--outline button--circle cart__item-count-minus">

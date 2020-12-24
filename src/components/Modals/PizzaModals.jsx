@@ -46,9 +46,8 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
           type: availableTypes[activeType],
           dopsName: activeDopsName
         };
-        console.log(obj);
         onClickAddPizza(obj);
-      };
+    };
 
 
     return (
@@ -110,7 +109,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                                 </svg>
                                 <span>Добавить в корзину за {price[activeSize] + activeDopsPrice} ₽</span>
                             </Button>
-                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
