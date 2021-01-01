@@ -64,3 +64,16 @@
         margin-top: 42px;
     }
 }
+
+
+@media (max-width: 1199px) {
+    .popular-block {
+        height: 110px;
+        width: 220px; 
+        &__title {
+            margin-top: 5px;
+            font-size: 13px;
+            font-weight: 600;
+        } 
+    }
+}
