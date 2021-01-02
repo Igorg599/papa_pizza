@@ -1,9 +1,15 @@
 .popular {
+    width: 95vw;
     margin-bottom: 30px;
+    overflow: hidden;
+    // margin-left: -20px;
+    // margin-right: -20px;
 
     ul {
         display: flex;
-        justify-content: center;
+        overflow: auto;
+        width: 100%;
+        scroll-snap-type: x mandatory;
     }
 
     &-block {

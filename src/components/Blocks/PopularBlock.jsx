@@ -10,7 +10,7 @@ function PopularBlock(obj) {
   
     return (
       <>
-        <div onClick={() => setmodalActive(true)} className="popular-block">
+        <div onClick={() => {setmodalActive(true); document.body.style.overflow = 'hidden'}} className="popular-block">
           <img
           className="popular-block__image"
           src={imageUrl}

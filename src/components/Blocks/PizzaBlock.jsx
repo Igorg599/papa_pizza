@@ -13,7 +13,7 @@ function PizzaBlock(obj) {
     <>
       <div className="items-block">
         <img
-        onClick={() => setmodalActive(true)}
+        onClick={() => {setmodalActive(true); document.body.style.overflow = 'hidden'}}
         className="items-block__image"
         src={imageUrl}
         alt="Pizza"
@@ -22,12 +22,14 @@ function PizzaBlock(obj) {
         <div className="items-block__descr">{descr}</div>
         <div className="items-block__bottom">
           <div className="items-block__price">от {price[0]} ₽</div>
-          <Button onClick={() => setmodalActive(true)} className="button--add" outline>
+          <Button onClick={() => {setmodalActive(true); document.body.style.overflow = 'hidden'}} className="button--add" outline>
             <span>Выбрать</span>
           </Button>
         </div>
       </div> 
-      <PizzaModals active={modalActive} setActive={setmodalActive} {...obj}/>
+      <div className="mod">
+        <PizzaModals active={modalActive} setActive={setmodalActive} {...obj}/>
+      </div>
     </>
   )
 }

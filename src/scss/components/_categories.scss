@@ -31,3 +31,15 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+ .categories {
+   ul {
+     li {
+      font-size: 12px; 
+      background-color: #fce4e4;
+      padding: 5px 10px;
+     }
+   }
+ }
+}

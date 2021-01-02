@@ -4,7 +4,7 @@
 
 @import 'components/all';
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 320px) {
   html {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
@@ -318,5 +318,21 @@ body {
       font-weight: 600;
       font-size: 18px;
     }
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 98%;
+  }
+
+  .wrapper {
+    width: calc(100vw - 40px);
   }
 }

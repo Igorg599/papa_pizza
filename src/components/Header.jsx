@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 import logoSvg from '../assets/img/pizza-logo.jpg';
 import pizza from '../assets/img/pizza.gif';
+import { element } from 'prop-types';
 
 const categoryNames = [{name: 'Пицца', path: '/'}, {name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Пицца за час!', path: '/hour'}];
 
@@ -29,10 +30,12 @@ function Header() {
 
         const sticky = header.offsetTop;
         const scrollCallBack = window.addEventListener("scroll", () => {
-            if (window.pageYOffset >= sticky + 50) {
+            if (window.pageYOffset >= sticky + 50 && document.documentElement.clientWidth >= 992) {
             header.classList.add("sticky");
             logo.style.transition = '1s';
             logo.style.display = 'block';
+            } else if (window.pageYOffset >= sticky + 50 && document.documentElement.clientWidth < 992) {
+            header.classList.add("sticky");
             } else {
             header.classList.remove("sticky");
             logo.style.display = 'none';

@@ -2,6 +2,8 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+    width: 100%;
+    overflow-x: auto;
 
     &__title {
         text-align: center;

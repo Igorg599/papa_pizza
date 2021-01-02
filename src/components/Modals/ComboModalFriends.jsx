@@ -46,8 +46,8 @@ function ComboModalFriends({itemsPizza, itemsDrink, itemsSauce, setActive, activ
     };
 
     return (
-        <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-            <div className="cl-btn-4" onClick={() => setActive(false)}></div>   
+        <div className={active ? "modal active" : "modal"} onClick={() => {setActive(false); document.body.style.overflow = 'visible'}}>
+            <div className="cl-btn-4" onClick={() => {setActive(false); document.body.style.overflow = 'visible'}}></div>   
             <div className={active ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}>
                 <div className="modal__content_combo">
                     <div className="modal__content_combo--des">
@@ -71,7 +71,7 @@ function ComboModalFriends({itemsPizza, itemsDrink, itemsSauce, setActive, activ
                             {itemsDrink.map((item, index) => (
                                 <ComboBlockItems onClickAddItem={handleAddDrinkToCart} item={item} key={index}/>
                             ))}
-                            <div onClick={() => setActive(false)}>
+                            <div onClick={() => {setActive(false); document.body.style.overflow = 'visible'}}>
                                 <Button onClick={onAddCombo} className="button--add" outline>
                                     <svg onClick={() => setActive(false)}
                                         width="12"

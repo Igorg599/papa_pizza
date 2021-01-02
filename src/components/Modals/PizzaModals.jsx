@@ -51,8 +51,8 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
 
 
     return (
-        <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-            <div className="cl-btn-4" onClick={() => setActive(false)}></div>   
+        <div className={active ? "modal active" : "modal"} onClick={() => {setActive(false); document.body.style.overflow = 'visible'}}>
+            <div className="cl-btn-4" onClick={() => {setActive(false); document.body.style.overflow = 'visible'}}></div>   
             <div className={active ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}>
                 <div className="modal__content_pizza">
                     <div className="modal__content_pizza-img">
@@ -93,7 +93,7 @@ function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onCli
                                 <DopBlock key={index} item={item} onClickAddDop={handleAddDopToCart}/>
                             ))}
                         </div>
-                        <div onClick={() => setActive(false)} className="items-block__bottom--modal">
+                        <div onClick={() => {setActive(false); document.body.style.overflow = 'visible'}} className="items-block__bottom--modal">
                             <Button onClick={onAddPizza} className="button--add" outline>
                                 <svg
                                     width="12"
