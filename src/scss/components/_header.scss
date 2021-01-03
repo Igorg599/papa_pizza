@@ -52,6 +52,11 @@
   margin-bottom: 5px;
 }
 
+.logo_mini-for_mobile {
+  display: none;
+  margin-bottom: 5px;
+}
+
 @media (max-width: 1199px) {
   .header {
     .sticky {
@@ -61,6 +66,34 @@
       z-index: 1000;
       width: 96vw;
       padding-right: 0%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .logo_mini-for_mobile {
+    display: block;
+  }
+  .header {
+    position: relative;
+    &__logo {
+      display: none;
+    }
+    &__fixed {
+      justify-content: space-between;
+      position: fixed;
+      padding-top: 5px;
+      margin-left: -25px;
+      padding-left: 20vw;
+      padding-right: 2vw;
+      width: 100%;
+      height: 60px;
+      background-color: #ffffff;
+      z-index: 5;
+      top: 0;
+      .logo_mini {
+        display: none;
+      }
     }
   }
 }

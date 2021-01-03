@@ -336,3 +336,9 @@ body {
     width: calc(100vw - 40px);
   }
 }
+
+@media (max-width: 767px) {
+  .content {
+    padding-top: 40px;
+  }
+}

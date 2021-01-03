@@ -7,7 +7,6 @@ import { useEffect } from "react";
 
 import logoSvg from '../assets/img/pizza-logo.jpg';
 import pizza from '../assets/img/pizza.gif';
-import { element } from 'prop-types';
 
 const categoryNames = [{name: 'Пицца', path: '/'}, {name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Пицца за час!', path: '/hour'}];
 
@@ -34,7 +33,7 @@ function Header() {
             header.classList.add("sticky");
             logo.style.transition = '1s';
             logo.style.display = 'block';
-            } else if (window.pageYOffset >= sticky + 50 && document.documentElement.clientWidth < 992) {
+            } else if (window.pageYOffset >= sticky + 50 && document.documentElement.clientWidth < 992 && document.documentElement.clientWidth > 767) {
             header.classList.add("sticky");
             } else {
             header.classList.remove("sticky");
@@ -59,6 +58,7 @@ function Header() {
                 <div id="myHeader" className="header__fixed">
                     <img id="logo" className="logo_mini" width="100" src={logoSvg} alt="logo"></img>
                     <Categories activeCategory={category} onClickCategory={onSelectCategory} items={categoryNames}/>
+                    <img className="logo_mini-for_mobile" width="99" src={logoSvg} alt="logo"></img>
                     <div  className="header__cart">
                         <Link to="/cart">
                             <button onClick={() => onSelectCategory(88)} className="button outline">
