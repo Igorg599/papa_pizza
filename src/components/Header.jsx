@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 import logoSvg from '../assets/img/pizza-logo.jpg';
 import pizza from '../assets/img/pizza.gif';
+import menuImage from '../assets/img/menu.jpg';
 
 const categoryNames = [{name: 'Пицца', path: '/'}, {name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Пицца за час!', path: '/hour'}];
 
@@ -56,6 +57,7 @@ function Header() {
             </div>
             <div className="container">
                 <div id="myHeader" className="header__fixed">
+                    <img className="menu_image" width="44" src={menuImage} alt="logo"></img>
                     <img id="logo" className="logo_mini" width="100" src={logoSvg} alt="logo"></img>
                     <Categories activeCategory={category} onClickCategory={onSelectCategory} items={categoryNames}/>
                     <img className="logo_mini-for_mobile" width="99" src={logoSvg} alt="logo"></img>

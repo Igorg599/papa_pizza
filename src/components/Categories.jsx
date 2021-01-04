@@ -20,7 +20,7 @@ function Categories({activeCategory, items, onClickCategory}) {
                 {items &&
                 items.map((item, index) => 
                 ( 
-                  <Link key={`${item}_${index}`} to={item.path}>
+                  <Link key={`${item}_${index}`} to={item.path} onClick={() => setHamburgerActive(false)}>
                     <li className={activeCategory === index ? 'active' : ''} onClick={() => onClickCategory(index)}>{item.name}</li>
                   </Link>
                 ))}
