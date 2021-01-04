@@ -196,3 +196,11 @@
 .content_loader {
   margin: 15px 32px 25px 0px;
 }
+
+@media (max-width: 575px) {
+  .items-block {
+    &:not(:nth-of-type(4n)) {
+      margin-right: 0px;
+    }
+  }
+}

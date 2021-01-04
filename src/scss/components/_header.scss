@@ -109,3 +109,12 @@
   }
 }
 
+@media (max-width: 575px) {
+  .header {
+    &__fixed {
+      margin-left: -15px;
+      padding-left: 10vw;
+    }
+  }
+}
+

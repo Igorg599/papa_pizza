@@ -60,7 +60,9 @@ function Header() {
                     <img className="menu_image" width="44" src={menuImage} alt="logo"></img>
                     <img id="logo" className="logo_mini" width="100" src={logoSvg} alt="logo"></img>
                     <Categories activeCategory={category} onClickCategory={onSelectCategory} items={categoryNames}/>
-                    <img className="logo_mini-for_mobile" width="99" src={logoSvg} alt="logo"></img>
+                    <Link to="/">
+                        <img className="logo_mini-for_mobile" width="99" src={logoSvg} alt="logo"></img>
+                    </Link>
                     <div  className="header__cart">
                         <Link to="/cart">
                             <button onClick={() => onSelectCategory(88)} className="button outline">

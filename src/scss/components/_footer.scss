@@ -59,3 +59,20 @@
         height: 30px;
     }
 }
+
+@media (max-width: 575px) {
+    .footer {
+        &__bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        &__rights {
+            margin-bottom: 15px;
+        }
+        &__logo img {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+}

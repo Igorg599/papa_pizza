@@ -4,7 +4,7 @@
 
 @import 'components/all';
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
   html {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
@@ -340,5 +340,49 @@ body {
 @media (max-width: 767px) {
   .content {
     padding-top: 40px;
+  }
+
+  .cart__item {
+    &-img {
+      margin-right: 28px;
+      width: 7%;
+
+      img {
+        height: 55px;
+      }
+    }
+
+    &-info {
+      width: 47%;
+    }
+
+    &-count {
+      width: 18%;
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 19%;
+
+      b {
+        font-size: 20px;
+      }
+    }
+
+    &-remove {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .wrapper {
+    width: calc(100vw - 20px);
+  }
+
+  body {
+    padding: 0 0 270px 0;
   }
 }

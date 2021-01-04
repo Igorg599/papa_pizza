@@ -27,9 +27,7 @@ function PizzaBlock(obj) {
           </Button>
         </div>
       </div> 
-      <div className="mod">
-        <PizzaModals active={modalActive} setActive={setmodalActive} {...obj}/>
-      </div>
+      <PizzaModals active={modalActive} setActive={setmodalActive} {...obj}/>
     </>
   )
 }
