@@ -294,3 +294,61 @@
         background: rgb(168, 49, 49); 
     }
 }
+
+@media (max-width: 575px) {
+    .modal__content {
+        width: 98vw;
+
+        &_pizza {
+            flex-direction: column;
+        }
+
+        &_pizza-img img{
+            margin-top: 10px;
+            height: 200px;
+        }
+
+        &_des {
+            display: flex;
+            flex-direction: column;
+            width: 93vw;
+        }
+
+        &_combo {
+            &--pizza {
+                &-block {
+                    font-size: 9px;
+                    font-weight: 300;
+                    line-height: 10px;
+                    width: 93px;
+                    height: 40px;
+                    h4 {
+                        margin-top: 4px;
+                        margin-left: 3px;
+                    }
+                }
+            }
+            &-bottom {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                &-left {
+                    width: 95vw;
+                }
+                &-right {
+                    justify-content: space-around;
+                    margin-top: 11px;
+                    width: 95vw;
+                }
+            }
+    
+        }
+    }
+
+    .cl-btn-4 {
+        left: 43vw;
+        top: 17px;
+        margin-top: 220px;
+    }
+}

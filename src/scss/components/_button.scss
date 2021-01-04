@@ -157,3 +157,11 @@
     }
   }
 }
+
+@media (max-width: 575px) {
+  .button--circle {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+}

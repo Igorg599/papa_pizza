@@ -36,3 +36,10 @@
         line-height: 20px;
     }
 }
+
+@media (max-width: 575px) {
+    .money__block img {
+        height: 100px;
+        margin: auto;
+    }
+}

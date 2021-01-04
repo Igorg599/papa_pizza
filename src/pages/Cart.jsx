@@ -99,7 +99,7 @@ function Cart() {
                   </Link>
                 </a>
                 <Button onClick={onClickOrder} className="pay-btn">
-                  <span>Оплатить сейчас</span>
+                  <span>Оплатить</span>
                 </Button>
               </div>
             </div>

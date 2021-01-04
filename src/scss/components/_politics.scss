@@ -23,3 +23,9 @@
         line-height: 16px;
     }
 }
+
+@media (max-width: 767px) {
+    .politics__title {
+        margin-top: 15px;
+    }
+}

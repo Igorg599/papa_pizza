@@ -17,3 +17,9 @@
         margin: 20px 0;
     }
 }
+
+@media (max-width: 767px) {
+    .about__title {
+        margin-top: 15px;
+    }
+}

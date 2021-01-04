@@ -83,3 +83,11 @@
         } 
     }
 }
+
+@media (max-width: 767px) {
+    .popular {
+        &__title_all {
+            margin-top: 3px;
+        }
+    }
+}

@@ -375,6 +375,22 @@ body {
       margin-left: 5px;
     }
   }
+
+  .cart {
+    &--empty {
+      width: 550px;
+    }
+  }
+
+  .container {  
+    &--cart {
+      max-width: 570px;
+      margin:  auto;
+      .content__title {
+        margin: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -384,5 +400,108 @@ body {
 
   body {
     padding: 0 0 270px 0;
+  }
+
+  .cart {
+    &--empty {
+      width: 300px;
+  
+      img {
+        width: 200px;
+        margin: 45px auto 30px;
+      }
+    }
+  }
+
+  .cart {
+    .content__title {
+      font-size: 18px;
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+  
+    &__clear {
+      span {
+        font-size: 17px;
+      }
+    }  
+
+    &__item {
+      &-img {
+        width: 7%;
+        margin-right: 16px;
+        margin-left: -5px;
+
+        img {
+          height: 35px;
+        }
+      }
+  
+      &-info {
+        width: 45%;
+        h3 {
+          font-size: 14px;
+          line-height: 15px;
+          margin-bottom: 3px;
+        }
+        p {
+          font-size: 11px;
+          line-height: 12px;
+        }
+      }
+  
+      &-count {
+        width: 20%;
+        b {
+          font-size: 15px;
+        }
+      }
+  
+      &-price {
+        width: 23%;
+        b {
+          font-size: 15px;
+        }
+      }
+
+      &-remove {
+        margin-left: 8px;
+      }
+    }
+  
+    &__bottom {
+      &-details {
+        justify-content: space-around;
+        span {
+          font-size: 15px;
+  
+          &:last-of-type {
+            b {
+              color: $orange;
+            }
+          }
+        }
+      }
+  
+      &-buttons {
+        .go-back-btn {
+          width: 160px;
+  
+          span {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+  
+        .pay-btn {
+          font-size: 14px;
+          font-weight: 600;
+          width: 120px;
+        }
+      }
+    }
   }
 }
