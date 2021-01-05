@@ -8,6 +8,7 @@ import {clearCart, removeCartItem, plusCartItem, minusCartItem} from '../redux/a
 import cartImg from '../assets/img/empty-cart.png';
 
 function Cart() {
+
   const dispatch = useDispatch();
   const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
 
@@ -35,15 +36,42 @@ function Cart() {
     dispatch(minusCartItem(id));
   };
 
-  const onClickOrder = () => {
-    console.log('ВАШ ЗАКАЗ:', items);
-  };
+  // const onClickOrder = () => {
+  //   console.log('ВАШ ЗАКАЗ:', items);
+  // };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    let self = e.currentTarget;
+    let formData = new FormData(self);
+    let name = self.querySelector('[name="Имя"]').value;
+    let tel = self.querySelector('[name="Телефон"]').value;
+    let mail = self.querySelector('[name="Email"]').value;
+    formData.append('Имя', name);
+    formData.append('Телефон', tel);
+    formData.append('Email', mail);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    self.reset();
+    console.log(formData);
+}
 
     return (
       <div className="content">
         <div className="container container--cart">
         {
-            totalCount ? <div className="cart">
+          totalCount ? <div className="cart">
             <div className="cart__top">
               <h2 className="content__title"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.33333 16.3333C7.06971 16.3333 7.66667 15.7364 7.66667 15C7.66667 14.2636 7.06971 13.6667 6.33333 13.6667C5.59695 13.6667 5 14.2636 5 15C5 15.7364 5.59695 16.3333 6.33333 16.3333Z" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -89,18 +117,35 @@ function Cart() {
                 <span> Всего пицц: <b>{totalCount} шт.</b> </span>
                 <span> Сумма заказа: <b>{totalPrice} ₽</b> </span>
               </div>
-              <div className="cart__bottom-buttons">
-                <a href="/" className="button button--outline button--add go-back-btn">
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 13L1 6.93015L6.86175 1" stroke="#D3D3D3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <Link to="/">
-                    <span onClick={() => onClickCategory(null)}>Продолжить покупки</span>
-                  </Link>
-                </a>
-                <Button onClick={onClickOrder} className="pay-btn">
-                  <span>Оплатить</span>
-                </Button>
+              <div className="cart__order">
+                <p>Введите личные данные для оформления заказа:</p>
+                <form onSubmit={onSubmit} action="#"  className="cart__order-form">
+                  <label className="cart__order-form-label">
+                    <span className="cart__order-form-text">Ваше имя</span>
+                    <input type="text" name="Имя" class="cart__order-form-input"></input>
+                  </label>
+                  <label className="cart__order-form-label">
+                    <span className="cart__order-form-text">Номер телефона</span>
+                    <input type="number" name="Телефон" class="cart__order-form-input" placeholder="+7 (___)___-__-__"></input>
+                  </label>
+                  <label className="cart__order-form-label">
+                    <span className="cart__order-form-text">Ваша почта</span>
+                    <input type="email" name="Email" class="cart__order-form-input" placeholder="post@mail.com"></input>
+                  </label>
+                  <div className="cart__bottom-buttons">
+                    <a href="/" className="button button--outline button--add go-back-btn">
+                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 13L1 6.93015L6.86175 1" stroke="#D3D3D3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <Link to="/">
+                        <span onClick={() => onClickCategory(null)}>Продолжить покупки</span>
+                      </Link>
+                    </a>
+                    <Button type="submit"  className="pay-btn">
+                      <span>Оформить</span>
+                    </Button>
+                  </div>
+                </form>
               </div>
             </div>
           </div> :
