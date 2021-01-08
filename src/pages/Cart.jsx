@@ -65,7 +65,7 @@ function Cart() {
 
     self.reset();
     console.log(formData);
-}
+  }
 
     return (
       <div className="content">
@@ -120,17 +120,18 @@ function Cart() {
               <div className="cart__order">
                 <p>Введите личные данные для оформления заказа:</p>
                 <form onSubmit={onSubmit} action="#"  className="cart__order-form">
+                  <input type="hidden" name="admin_email[]" value="Igorgordeev5@yandex.ru"/>
                   <label className="cart__order-form-label">
                     <span className="cart__order-form-text">Ваше имя</span>
-                    <input type="text" name="Имя" class="cart__order-form-input"></input>
+                    <input type="text" name="Имя" className="cart__order-form-input"></input>
                   </label>
                   <label className="cart__order-form-label">
                     <span className="cart__order-form-text">Номер телефона</span>
-                    <input type="number" name="Телефон" class="cart__order-form-input" placeholder="+7 (___)___-__-__"></input>
+                    <input type="number" name="Телефон" className="cart__order-form-input" placeholder="+7 (___)___-__-__"></input>
                   </label>
                   <label className="cart__order-form-label">
                     <span className="cart__order-form-text">Ваша почта</span>
-                    <input type="email" name="Email" class="cart__order-form-input" placeholder="post@mail.com"></input>
+                    <input type="email" name="Email" className="cart__order-form-input" placeholder="post@mail.com"></input>
                   </label>
                   <div className="cart__bottom-buttons">
                     <a href="/" className="button button--outline button--add go-back-btn">
@@ -149,16 +150,18 @@ function Cart() {
               </div>
             </div>
           </div> :
-          <div className="cart cart--empty">
-            <h2>Корзина пустая <i>&#127829;</i></h2>
-            <p>
-              Вероятней всего, вы ещё не выбрали товар.<br />
-              Для выбора товара перейдите на главную страницу.
-            </p>
-            <img src={cartImg} alt="Empty cart" />
-            <Link to="/" className="button button--black">
-              <span onClick={() => onClickCategory(null)}>Продолжить покупки</span>
-            </Link>
+          <div>
+            <div className="cart cart--empty">
+              <h2>Корзина пустая <i>&#127829;</i></h2>
+              <p>
+                Вероятней всего, вы ещё не выбрали товар.<br />
+                Для выбора товара перейдите на главную страницу.
+              </p>
+              <img src={cartImg} alt="Empty cart" />
+              <Link to="/" className="button button--black">
+                <span onClick={() => onClickCategory(null)}>Продолжить покупки</span>
+              </Link>
+            </div>
           </div>
         }
         </div>

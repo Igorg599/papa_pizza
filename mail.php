@@ -63,7 +63,7 @@ $message = "<table style='width: 50%;'>$message . $prod</table>";
 
 
 // От кого
-$mail->setFrom('igorg599@gmail.com' . $_SERVER['HTTP_HOST'], 'Your best site');
+$mail->setFrom('adm@' . $_SERVER['https://test2.союз-пермь.рф'], 'Your best site');
 
 // Кому
 foreach ( $admin_email as $key => $value ) {
