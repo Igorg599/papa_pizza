@@ -47,9 +47,15 @@ function Cart() {
     let name = self.querySelector('[name="Имя"]').value;
     let tel = self.querySelector('[name="Телефон"]').value;
     let mail = self.querySelector('[name="Email"]').value;
+    let kom = self.querySelector('[name="Комментарий"]').value;
+    let adress = self.querySelector('[name="Адрес"]').value;
     formData.append('Имя', name);
     formData.append('Телефон', tel);
     formData.append('Email', mail);
+    formData.append('Комментарий', kom);
+    formData.append('Адрес', adress);
+    formData.append('Всего товаров', `${totalCount} шт.`);
+    formData.append('Сумма заказа', `${totalPrice} ₽`);
 
     let xhr = new XMLHttpRequest();
 
@@ -114,7 +120,7 @@ function Cart() {
             </div>
             <div className="cart__bottom">
               <div className="cart__bottom-details">
-                <span> Всего пицц: <b>{totalCount} шт.</b> </span>
+                <span> Всего товаров: <b>{totalCount} шт.</b> </span>
                 <span> Сумма заказа: <b>{totalPrice} ₽</b> </span>
               </div>
               <div className="cart__order">
@@ -126,12 +132,20 @@ function Cart() {
                     <input type="text" name="Имя" className="cart__order-form-input"></input>
                   </label>
                   <label className="cart__order-form-label">
-                    <span className="cart__order-form-text">Номер телефона</span>
-                    <input type="number" name="Телефон" className="cart__order-form-input" placeholder="+7 (___)___-__-__"></input>
+                    <span className="cart__order-form-text">*Номер телефона</span>
+                    <input type="number" name="Телефон" className="cart__order-form-input" placeholder="+7 (___)___-__-__" required></input>
                   </label>
                   <label className="cart__order-form-label">
-                    <span className="cart__order-form-text">Ваша почта</span>
-                    <input type="email" name="Email" className="cart__order-form-input" placeholder="post@mail.com"></input>
+                    <span className="cart__order-form-text">*Ваша почта</span>
+                    <input type="email" name="Email" className="cart__order-form-input" placeholder="post@mail.com" required></input>
+                  </label>
+                  <label className="cart__order-form-label">
+                    <span className="cart__order-form-text">Комментарий</span>
+                    <input type="text" name="Комментарий" className="cart__order-form-input"></input>
+                  </label>
+                  <label className="cart__order-form-label">
+                    <span className="cart__order-form-text">*Адрес доставки</span>
+                    <input type="text" name="Адрес" className="cart__order-form-input" placeholder="ул. Мира, 87-99, подъезд 7, этаж 11" required></input>
                   </label>
                   <div className="cart__bottom-buttons">
                     <a href="/" className="button button--outline button--add go-back-btn">
