@@ -12,9 +12,11 @@ function Cart() {
   const dispatch = useDispatch();
   const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
 
+  const [modalActive, setmodalActive] = React.useState(false);
+
   const onClickCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
-}, []);
+  }, []);
 
   const addedPizzas = Object.keys(items).map(key => {
     return items[key].items[0];
@@ -70,7 +72,8 @@ function Cart() {
     xhr.send(formData);
 
     self.reset();
-    console.log(formData);
+    setmodalActive(true);
+    dispatch(clearCart());
   }
 
     return (
@@ -178,6 +181,13 @@ function Cart() {
             </div>
           </div>
         }
+        </div>
+        <div className={modalActive ? "modal active" : "modal"} onClick={() => {setmodalActive(false); document.body.style.overflow = 'visible'}}>
+            <div className="cl-btn-4" onClick={() => {setmodalActive(false); document.body.style.overflow = 'visible'}}></div>   
+            <div className={modalActive ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}>
+              <h3>Спасибо за заказ!</h3>
+              <h3>Скоро мы с вами свяжемся 	&#128522;</h3>
+            </div>
         </div>
       </div>
   )
