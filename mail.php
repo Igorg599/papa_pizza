@@ -27,12 +27,18 @@ $myArray = json_decode($jsonText, true);
 $prod = '';
 
 foreach ($myArray as $key => $value) {
-		$cat = $value["category"];
-	    $title = $value["title"];
-	    $price = $value["price"];
+	    $title = $value["name"];
+		$price = $value["price"];
+		$size = $value["size"];
+		$type = $value["type"];
+		$pizza = implode('', $value["pizza"]);
+		$sauce = implode('', $value["sauce"]);
+		$drink = implode('', $value["drink"]);
+		$dopsName = implode('', $value["dopsName"]);
 	    $prod .= "
 			<tr>
 				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$title</td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$type$size$dopsName$pizza$drink$sauce</td>
 				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$price</td>
 			</tr>
 			";
@@ -59,7 +65,7 @@ foreach ( $_POST as $key => $value ) {
 		";
 	}
 }
-$message = "<table style='width: 50%;'>$message . $prod</table>";
+$message = "<table style='width: 100%;'>$message . $prod</table>";
 
 
 // От кого

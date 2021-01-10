@@ -22,6 +22,10 @@ function Cart() {
     return items[key].items[0];
   });
 
+  const objSend = Object.keys(items).map(key => {
+    return items[key].items;
+  }).flat();
+
   const onClearCart = () => {
     dispatch(clearCart());
   };
@@ -51,6 +55,7 @@ function Cart() {
     let mail = self.querySelector('[name="Email"]').value;
     let kom = self.querySelector('[name="Комментарий"]').value;
     let adress = self.querySelector('[name="Адрес"]').value;
+    formData.append('Товары', JSON.stringify(objSend));
     formData.append('Имя', name);
     formData.append('Телефон', tel);
     formData.append('Email', mail);
@@ -58,6 +63,8 @@ function Cart() {
     formData.append('Адрес', adress);
     formData.append('Всего товаров', `${totalCount} шт.`);
     formData.append('Сумма заказа', `${totalPrice} ₽`);
+
+    console.log(objSend);
 
     let xhr = new XMLHttpRequest();
 
