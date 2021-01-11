@@ -67,6 +67,7 @@ function Header() {
                     <Link to="/">
                         <div className="header__logo">
                             <img width="150" src={logoSvg} alt="Pizza logo" />
+                            <div className="header__time">ВС-ЧТ: 11:00 - 23:00 &emsp; ПТ-СБ: 11:00 - 1:00</div>
                         </div>   
                     </Link>
                 </div>
@@ -78,6 +79,7 @@ function Header() {
                         <Link to="/">
                             <img className="logo_mini-for_mobile" width="99" src={logoSvg} alt="logo"></img>
                         </Link>
+                        <div className="header__time-mini">ВС-ЧТ: 11:00-23:00 &nbsp; ПТ-СБ: 11:00-1:00</div>
                         <div  className="header__cart">
                             <Link to="/cart">
                                 <button onClick={() => onSelectCategory(88)} className="button outline">

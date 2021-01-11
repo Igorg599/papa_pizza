@@ -5,7 +5,6 @@ import ComboModalFriends from '../../Modals/ComboModalFriends';
 
 function ComboFriends({itemsPizza, itemsDrink, itemsSauce, onClickAddCombo, item}) {
   const [modalActive, setmodalActive] = React.useState(false);
-  console.log(itemsPizza);
   return (
     <>
       <div className="items-block">

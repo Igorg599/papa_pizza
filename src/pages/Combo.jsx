@@ -25,8 +25,6 @@ function Combo() {
     });
   }
 
-  console.log(ComboItems);
-
   return (
     <div className="container">
         <div className="content__items"> 
