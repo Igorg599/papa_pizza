@@ -141,10 +141,12 @@
                 width: 395px;
             }
             &-right {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
+                display: block;
                 width: 395px;
+                &-drink {
+                    display: flex;
+                    justify-content: center;
+                }
             }
         }
 

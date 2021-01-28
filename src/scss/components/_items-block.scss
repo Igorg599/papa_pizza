@@ -74,6 +74,7 @@
   }
   
   &__selector {
+    min-width: 295px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -91,11 +92,12 @@
       }
 
       li {
+        min-width: 95px;
         padding: 8px;
         flex: 1;
         cursor: pointer;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
         text-align: center;
         @include noselect();
         &.active {
