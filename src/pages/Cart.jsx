@@ -9,6 +9,10 @@ import cartImg from '../assets/img/empty-cart.png';
 
 function Cart() {
 
+  React.useEffect(() => {
+    document.body.style.overflow = 'auto';
+  }, []);
+
   const dispatch = useDispatch();
   const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
 
@@ -42,10 +46,6 @@ function Cart() {
     dispatch(minusCartItem(id));
   };
 
-  // const onClickOrder = () => {
-  //   console.log('ВАШ ЗАКАЗ:', items);
-  // };
-
   const onSubmit = (e) => {
     e.preventDefault();
     let self = e.currentTarget;
@@ -55,16 +55,18 @@ function Cart() {
     let mail = self.querySelector('[name="Email"]').value;
     let kom = self.querySelector('[name="Комментарий"]').value;
     let adress = self.querySelector('[name="Адрес"]').value;
+    let pay = self.querySelector('[name="Способ оплаты"]').value;
+    let delivery = self.querySelector('[name="Доставка"]').value;
     formData.append('Товары', JSON.stringify(objSend));
     formData.append('Имя', name);
     formData.append('Телефон', tel);
     formData.append('Email', mail);
     formData.append('Комментарий', kom);
     formData.append('Адрес', adress);
+    formData.append('Способ оплаты', pay);
+    formData.append('Доставка', delivery);
     formData.append('Всего товаров', `${totalCount} шт.`);
     formData.append('Сумма заказа', `${totalPrice} ₽`);
-
-    console.log(objSend);
 
     let xhr = new XMLHttpRequest();
 
@@ -136,7 +138,7 @@ function Cart() {
               <div className="cart__order">
                 <p>Введите личные данные для оформления заказа:</p>
                 <form onSubmit={onSubmit} action="#"  className="cart__order-form">
-                  <input type="hidden" name="admin_email[]" value="Igorgordeev5@yandex.ru"/>
+                  <input type="hidden" name="admin_email[]" value="igorg599@gmail.com"/>
                   <label className="cart__order-form-label">
                     <span className="cart__order-form-text">Ваше имя</span>
                     <input type="text" name="Имя" className="cart__order-form-input"></input>
@@ -146,8 +148,8 @@ function Cart() {
                     <input type="number" name="Телефон" className="cart__order-form-input" placeholder="+7 (___)___-__-__" required></input>
                   </label>
                   <label className="cart__order-form-label">
-                    <span className="cart__order-form-text">*Ваша почта</span>
-                    <input type="email" name="Email" className="cart__order-form-input" placeholder="post@mail.com" required></input>
+                    <span className="cart__order-form-text">Ваша почта</span>
+                    <input type="email" name="Email" className="cart__order-form-input" placeholder="post@mail.com"></input>
                   </label>
                   <label className="cart__order-form-label">
                     <span className="cart__order-form-text">Комментарий</span>
@@ -156,6 +158,21 @@ function Cart() {
                   <label className="cart__order-form-label">
                     <span className="cart__order-form-text">*Адрес доставки</span>
                     <input type="text" name="Адрес" className="cart__order-form-input" placeholder="ул. Мира, 87-99, подъезд 7, этаж 11" required></input>
+                  </label>
+                  <label className="cart__order-form-label">
+                    <span className="cart__order-form-text">Способ оплаты:</span>
+                    <select name="Способ оплаты" className="cart__order-form-select">
+                      <option value='Карта'>Карта</option>
+                      <option value='Наличные'>Наличные</option>
+                      <option value='Перевод'>Перевод</option>
+                    </select>
+                  </label>
+                  <label className="cart__order-form-label">
+                    <span className="cart__order-form-text">Выбор доставки:</span>
+                    <select name="Доставка" className="cart__order-form-select">
+                      <option value='Доставка курьером'>Доставка курьером</option>
+                      <option value='Самовывоз'>Самовывоз</option>
+                    </select>
                   </label>
                   <div className="cart__bottom-buttons">
                     <a href="/" className="button button--outline button--add go-back-btn">

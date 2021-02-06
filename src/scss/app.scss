@@ -322,6 +322,13 @@ body {
       &-text {
         font-weight: 700;
       }
+      &-select {
+        width: 240px;
+        height: 42px;
+        border-radius: 5px;
+        font-size: 16px;
+        background: #efefef;
+      }
     }
   }
 
@@ -586,6 +593,9 @@ body {
         &-text {
           font-size: 13px;
           width: 100px;
+        }
+        &-select {
+          width: 220px;
         }
       }
     }

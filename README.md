@@ -69,3 +69,5 @@
 "commit-32" - реализовано сохранение выбранных товаров в localstorage.
 
 "commit-33" - создан компонент ComboModalTrio.
+
+"commit-34" - добавлены дополнительные dropdown в компоненте Cart.
