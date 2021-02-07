@@ -24,6 +24,9 @@ function Categories({activeCategory, items, onClickCategory}) {
                     <li className={activeCategory === index ? 'active' : ''} onClick={() => onClickCategory(index)}>{item.name}</li>
                   </Link>
                 ))}
+                <Link to='/politics' onClick={() => setHamburgerActive(false)}>
+                  <div className="categories_politics">Политика конфиденциальности</div>                
+                </Link>
               </ul>
             </div>
         </div>

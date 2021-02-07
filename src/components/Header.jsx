@@ -60,9 +60,13 @@ function Header() {
     
     }, []);
 
+    const Pageup = () => {
+        document.documentElement.scrollTop = 0;
+    }
+
     return (
         <>
-            <div id="up" className="header">
+            <div className="header">
                 <div className="container">
                     <Link to="/">
                         <div className="header__logo">
@@ -124,9 +128,9 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <a href="#up" class="pageup">
+            <div className="pageup" onClick={Pageup}>
                 <img src={up} width="36" alt="up"/>
-            </a>
+            </div>
         </>
     )
 }
