@@ -6,9 +6,10 @@ import {fetchDrink} from '../redux/action/drink';
 import {fetchSauce} from '../redux/action/sauce';
 import Button from '../components/Button';
 import ComboModalTrio from '../components/Modals/ComboModalTrio';
+import Lanch from '../assets/img/combo/lanch.jpg';
 
 function Combo() {
-  const ComboItems = [{name: "Комбо 'Для друзей'", imageUrl: "http://papapizza59.ru/image/cache/catalog/kombo/dljadruzej-350x350.jpg", price: 2700, descr: "В состав входят 5 пицц размером M (4,000.00 гр.), 2 л. напитка на выбор и 5 соусов."}, {name: "Комбо 'Для двоих'", imageUrl: "http://papapizza59.ru/image/cache/catalog/kombo/dljadvoih-350x350.jpg", price: 950, descr: "В состав входят 2 пиццы размером S (1,200.00 гр.), 1 л. напитка на выбор и 2 соуса."}, {name: "Комбо 'Вечеринка'", imageUrl: "http://papapizza59.ru/image/cache/catalog/kombo/vecherinka-350x350.jpg", price: 5000, descr: "В состав входят 10 пицц размером M (4,000.00 гр.), 3 л. напитка на выбор и 10 соусов."}];
+  const ComboItems = [{name: "Комбо 'Ланч'", imageUrl: Lanch, price: 600, descr: "В состав комбо входят 1 пицца размером S на выбор, 2 салата 'Греческий', 2 морса 0,3л на выбор (860 гр.). Доступен для заказа с 11:00 до 16:00."},{name: "Комбо 'Для друзей'", imageUrl: "http://papapizza59.ru/image/cache/catalog/kombo/dljadruzej-350x350.jpg", price: 2700, descr: "В состав входят 5 пицц размером M (4,000.00 гр.), 2 л. напитка на выбор и 5 соусов."}, {name: "Комбо 'Для двоих'", imageUrl: "http://papapizza59.ru/image/cache/catalog/kombo/dljadvoih-350x350.jpg", price: 950, descr: "В состав входят 2 пиццы размером S (1,200.00 гр.), 1 л. напитка на выбор и 2 соуса."}, {name: "Комбо 'Вечеринка'", imageUrl: "http://papapizza59.ru/image/cache/catalog/kombo/vecherinka-350x350.jpg", price: 5000, descr: "В состав входят 10 пицц размером M (4,000.00 гр.), 3 л. напитка на выбор и 10 соусов."}];
 
   const ComboTrio = {name: "Горячее трио", imageUrl: "http://papapizza59.ru/image/cache/catalog/kombo/gt-1000x1000.jpg", price: [1250, 1750, 2100], descr: "Выбери 3 пиццы одного размера на пышном тесте, 3 соуса и 1 напиток по специальной цене."};
 
