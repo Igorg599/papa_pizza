@@ -33,6 +33,9 @@
   &_politics {
     display: none;
   }
+  &_phone {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -81,11 +84,23 @@
       }
     }
     &_politics {
-      margin-top: 100px;
+      margin-top: 6vh;
       display: block;
       color: white;
       font-size: 16px;
       font-weight: bold;
+    }
+    &_phone {
+      margin-top: 5vh;
+      display: flex;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 44px;
+      }
     }
   }
 
