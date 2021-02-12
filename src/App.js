@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Header, Footer} from './components';
-import {Home, Cart, Combo, Drink, Sauce, Snacks, Hour, About, Condition, Politics, Offer, Money} from './pages';
+import {Home, Cart, Combo, Drink, Sauce, Snacks, Hour, About, Condition, Politics, Offer, Money, Stock} from './pages';
 import {Route} from 'react-router-dom';
 
 
@@ -16,6 +16,7 @@ function App() {
           <Route path="/combo" component={Combo} exact/>
           <Route path="/drink" component={Drink} exact/>
           <Route path="/sauce" component={Sauce} exact/>
+          <Route path="/stock" component={Stock} exact/>
           <Route path="/snacks" component={Snacks} exact/>
           <Route path="/hour" component={Hour} exact/>
           <Route path="/about" component={About} exact/>

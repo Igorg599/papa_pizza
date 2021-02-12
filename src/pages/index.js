@@ -10,3 +10,4 @@ export {default as Condition} from './Condition';
 export {default as Politics} from './Politics';
 export {default as Offer} from './Offer';
 export {default as Money} from './Money';
+export {default as Stock} from './Stock';

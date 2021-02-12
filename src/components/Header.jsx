@@ -10,7 +10,7 @@ import pizza from '../assets/img/pizza.gif';
 import menuImage from '../assets/img/menu.jpg';
 import up from '../assets/img/up.jpg';
 
-const categoryNames = [{name: 'Пицца', path: '/'}, {name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Пицца за час!', path: '/hour'}];
+const categoryNames = [{name: 'Пицца', path: '/picca'}, {name: 'Комбо', path: '/combo'}, {name: 'Напитки', path: '/drink'}, {name: 'Горячие закуски', path: '/snacks' }, {name: 'Соусы к пицце', path: '/sauce'}, {name: 'Акции', path: '/stock'}, {name: 'Пицца за опоздание', path: '/hour'}];
 
 function Header() {
     const {totalPrice, totalCount} = useSelector(({cart}) => ({
