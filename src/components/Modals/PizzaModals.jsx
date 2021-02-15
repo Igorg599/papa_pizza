@@ -9,7 +9,7 @@ import CheeseeMore from '../../assets/img/cheese2.jpg';
 
 function PizzaModals({id, active, setActive, name, imageUrl, price, descr, onClickAddPizza}) {
     const availableTypes = ['Пышное', 'Тонкое'];
-    const availableSizes = ['S (23-25 см)', 'M (28-30 см)', 'L (38-40 см)'];
+    const availableSizes = ['S (23-25 см)', 'M (28-30 см)', 'L (38-40 см)', 'XL (48-50 см)'];
 
     const DopItems = [{name: ' Халапенью (30 гр.)', price: 50, img: Hala}, {name: ' Сыр (50 гр.)', price: 50, img: Cheesee}, {name: ' Сыр (100 гр.)', price: 80, img: CheeseeMore}];
 

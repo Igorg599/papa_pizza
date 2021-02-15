@@ -92,7 +92,7 @@
       }
 
       li {
-        min-width: 95px;
+        min-width: 75px;
         padding: 8px;
         flex: 1;
         cursor: pointer;
@@ -209,6 +209,7 @@
       ul {  
         li {
           font-size: 13px;
+          min-width: 70px;
         }
       }
     }
